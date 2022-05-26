@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "Encerrar Chamado",
+        "text": "Segue evidencias.\n\nDevido isso estou encerrando esse chamado, desde já fico a disposição para eventuais dúvidas e suporte. \n\nAtenciosamente."
+    },
+    {
+        "id": 2,
+        "title": "Chamado Em Atendimento",
+        "text": "Bom dia, Prezados\n\nEstamos trabalhando na solução do seu caso, em breve retornaremos neste chamado.\n\nAtenciosamente."
+    },
+    {
+        "id": 3,
+        "title": "Encerrar Chamado Boccus",
+        "text": "Boa tarde, Prezados\n\nFoi feita a importação do cadastro para o sistema, o mesmo pode ser encontrado pela AR\nSegue evidencias.\n\nDevido isso estou encerrando esse chamado, desde já fico a disposição para eventuais dúvidas e suporte.\n\nAtenciosamente."
+    },
+    {
+        "id": 4,
+        "title": "Encerrar Chamado por Falta de Retorno ",
+        "text": "Bom dia, Prezados\n\nDevida falta de retorno estou encerrando esse chamado, desde já fico a disposição para eventuais dúvidas e suporte.\n\nAtenciosamente."
+    },
+    {
+        "id": 5,
+        "title": "Designar Chamado",
+        "text": "Prezados,\n\nO chamado será encaminhado ao analista responsável.\nPor favor aguardar o contato para o início do atendimento.\n\nAtenciosamente."
+    },
+    {
+        "id": 6,
+        "title": "Criar Incidente",
+        "text": "Bom dia, Prezados\n\nFoi aberto um chamado com a Neogrid, assim que houver retorno notificarei neste chamado.\n\nAtenciosamente."
+    },
+	{
+        "id": 7,
+        "title": "Agendamento instalação TEF",
+        "text": "Bom dia, Prezados\n\nPodemos agendar uma instalação do TEF nas 3 maquinas quando? Necessito previamente das seguintes informações:\n\n- IP das maquinas\n- Login e Senha de cada maquina\n- Modelo do TEF (PinPad)\n- Modelo da Impressora de Filipetas\n\nFico no aguardo.\n\nAtenciosamente."
+    },
+    {
+        "id": 8,
+        "title": "Solicitação dados da maquina",
+        "text": "Bom dia, Prezados\n\nPoderiam enviar o IP e os dados de acesso da maquina.\nFico no aguardo.\n\nAtenciosamente."
+    },
+	{
+		"id": 9,
+		"title": "Agendamento configuração impressora",
+		"text": "Boa tarde, Prezados\n\nFoi feita conexão na maquina, porém a mesma se encontrava bloqueada, devido isso poderiam enviar as seguintes informações:\n\n- Usuário e senha da maquina\n- IP da impressora\n- Modelo da impressora\n\nFico no aguardo.\n\nAtenciosamente."
+	}
+]
