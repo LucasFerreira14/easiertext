@@ -80,7 +80,6 @@ export default {
     },
     async getTexts() {
       let result = await axios.get("http://easiertext-api.herokuapp.com/texts")
-      console.log(result.data)
       this.texts = result.data;
       this.searchList = result.data;
     }

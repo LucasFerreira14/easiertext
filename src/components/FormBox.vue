@@ -52,8 +52,10 @@ export default {
                 "title": this.title,
                 "text": this.text
             })
+            if (result.status == 200) {
+                alert("Texto criado com sucesso")
+            }
             window.location.reload()
-            console.log(result)
         }
     },
 }

@@ -7,16 +7,13 @@
             id="input-live"
             :v-model="title"
             :value="title"
-            :state="nameState"
+            @input="onInputTitle"
             aria-describedby="input-live-help input-live-feedback"
             trim
             :disabled="edit"
             
             ></b-form-input>
 
-            <b-form-invalid-feedback id="input-live-feedback">
-                Enter at least 6 letters
-            </b-form-invalid-feedback>
         </div>
         <div>
             <b-form-textarea
@@ -24,6 +21,7 @@
                 id="textarea"
                 :v-model="text"
                 :value="text"
+                @input="onInputText"
                 placeholder="Enter something..."
                 rows="3"
                 max-rows="6"
@@ -36,7 +34,7 @@
 
 
             <b-button class="edit" @click="enableEditButton" variant="outline-primary">Editar</b-button>
-            <b-button class="save" v-show="save" @click="enableEditButton" variant="outline-success">Salvar</b-button>
+            <b-button class="save" v-show="save" @click="saveEdition" variant="outline-success">Salvar</b-button>
 
             <b-button class="copy" @click="copyText" variant="dark">Copiar</b-button>
         </div>
@@ -53,22 +51,51 @@ export default {
             edit: true,
             save: false,
             showModal: false,
-            showMessage: false
+            showMessage: false,
+            title_receive: "",
+            text_receive: "",
+
         }
     },
     methods: {
         async deleteText() {
             let result = await axios.delete("http://easiertext-api.herokuapp.com/texts/delete/" + this.id)
-            location.reload()
-            console.log(result)
-            
+            if (result.status == 200) {
+                alert("Texto deletado com sucesso")
+            }
+            window.location.reload()
         },
         enableEditButton() {
             this.edit = !this.edit
             this.save = !this.save
+
+            this.text_receive = this.text
+            this.title_receive = this.title
+        },
+        async saveEdition(){
+            this.save = !this.save;
+            this.edit = !this.edit;
+
+            let result = await axios.post("http://easiertext-api.herokuapp.com/texts/edit/" + this.id , {
+                "id": this.id,
+                "title": this.title_receive,
+                "text": this.text_receive
+            });
+
+            if (result.status == 200) {
+                alert("Texto alterado com sucesso")
+            }
+            window.location.reload()
+
         },
         copyText() {
             navigator.clipboard.writeText(this.text); 
+        },
+        onInputTitle(e) {
+            this.title_receive = e
+        },
+        onInputText(e) {
+            this.text_receive = e
         },
              
     },
