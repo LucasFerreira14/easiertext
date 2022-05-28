@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="search-content">
-      <!-- <search-bar @termChange="filteredTexts" class="search"></search-bar> -->
       <div>   
         <b-form-input @input="onInput" v-model="search" style="width: 350px;" placeholder="Pesquise o título de um texto"></b-form-input>   
       </div>
@@ -11,8 +10,11 @@
     <form-box v-show="clicked"></form-box>
     <h3 v-show="!searching">Todos os textos:</h3>
     <h3 v-show="searching">Resultado da pesquisa:</h3>
+    <div v-show="isLoading" class="text-center">
+      <b-spinner style="margin: 180px 0px 0px 0px"></b-spinner>
+    </div>
     <p v-show="notFound" style="margin: 180px 0px 0px 200px">Nenhum texto encontrado!</p>
-    <text-card v-for="text in texts" :key="text.id" :id="text.id" :title="text.title" :text="text.text"></text-card>
+    <text-card v-show="!isLoading" v-for="text in texts" :key="text.id" :id="text.id" :title="text.title" :text="text.text"></text-card>
   </div>
 </template>
 
@@ -33,11 +35,17 @@ export default {
       searchList: [],
       search: "",
       searching: false,
-      notFound: false
+      notFound: false,
+      isLoading: true
     }
   },
   mounted() {
     this.getTexts();
+    setTimeout(() => {
+      if (this.texts != "") {
+        this.isLoading = false
+      }
+    },1500) 
   },
   methods: {
     onInput(e) {
