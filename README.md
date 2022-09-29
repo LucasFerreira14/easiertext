@@ -2,11 +2,11 @@
 
 ## Needs install node "https://nodejs.org/en/" and set some environment variables below:
 
-  # Set "node" variable:
+  ## Set "node" variable:
 
       set PATH=%PATH%;C:\$node-folder$
 
-  # Set "npm" variable:
+  ## Set "npm" variable:
 
       set PATH=%PATH%;C:\$node-folder$\node_modules\npm\bin
 
@@ -18,9 +18,9 @@
 
   npm run serve
   
-## After install an run will create a "dist" folder, that folder will be used to setup the extension in Chrome, Edge... 
+After install an run will create a "dist" folder, that folder will be used to setup the extension in Chrome, Edge... 
 
-## You must active developer mode on then click in "Load Unpacked" and select folder "dist"
+You must active developer mode on then click in "Load Unpacked" and select folder "dist"
 
 
 
