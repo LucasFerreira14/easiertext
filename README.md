@@ -18,9 +18,9 @@
 
   npm run serve
   
-##After install an run will create a "dist" folder, that folder will be used to setup the extension in Chrome, Edge... 
+## After install an run will create a "dist" folder, that folder will be used to setup the extension in Chrome, Edge... 
 
-##You must active developer mode on then click in "Load Unpacked" and select folder "dist"
+## You must active developer mode on then click in "Load Unpacked" and select folder "dist"
 
 
 
